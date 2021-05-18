@@ -1,0 +1,30 @@
+"Data Element (Field Name)","Type (min,max)",Required,"Format / Values"
+"`Organisation Path`_ (organisation_path)
+
+",string,yes,"A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client."
+"`Client Key`_ (client_key)
+
+","string (2,50)",yes,"This is a number or code assigned to each individual client referred to the commissioned organisation. The client identifier is unique and stable for each individual within the Provider Organisation."
+"`Episode Key`_ (episode_key)
+
+","string (2,50)",yes,"This is a number or code assigned to each episode. The Episode Key is unique and stable for each episode at the level of the Provider Organisation."
+"`Episode - End Date`_ (episode_end_date)
+
+
+
+METeOR: `614094 <http://meteor.aihw.gov.au/content/index.phtml/itemId/614094>`__",date,"—","The date on which an *Episode of Care* is formally or administratively ended"
+"`Episode - Completion Status`_ (episode_completion_status)
+
+",string,"—",":0: Episode open
+:1: Episode closed - treatment concluded
+:2: Episode closed administratively - client could not be contacted
+:3: Episode closed administratively - client declined further contact
+:4: Episode closed administratively - client moved out of area
+:5: Episode closed administratively - client referred elsewhere
+:6: Episode closed administratively - other reason"
+"`Mobile Number`_ (mobile_number)
+
+",string,"—","The mobile phone number of the client."
+"`Email`_ (email)
+
+",string,"—","The email address of the client."

@@ -1,0 +1,92 @@
+{
+  "@id": "invitations-metadata.json",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "columns": [{
+    "name": "organisation_path",
+    "titles": [ "organisation_path" ],
+    "dc:title": "Organisation Path",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client.",
+    "schema:disambiguatingDescription": "type/organisation_path.rst",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+     "name": "client_key",
+    "titles": [ "client_key" ],
+    "dc:title": "Client Key",
+    "schema:description": "This is a number or code assigned to each individual client referred to the commissioned organisation. The client identifier is unique and stable for each individual within the Provider Organisation.",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+      },
+    "required": true
+  },{
+    "name": "episode_key",
+    "titles": [ "episode_key" ],
+    "dc:title": "Episode Key",
+    "schema:description": "This is a number or code assigned to each episode. The Episode Key is unique and stable for each episode at the level of the Provider Organisation.",
+    "schema:disambiguatingDescription": "table/invitation/key.rst",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": true
+  },{
+    "name": "episode_end_date",
+    "titles": [ "episode_end_date" ],
+    "dc:title": "Episode - End Date",
+    "schema:description": "The date on which an *Episode of Care* is formally or administratively ended",
+    "schema:disambiguatingDescription": "table/invitation/end-date.rst",
+    "schema:meteorItem": "614094",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "date",
+      "format": "dMMyyyy",
+      "minimum": "2016-01-01"
+    }
+  },{
+    "name": "episode_completion_status",
+    "titles": [ "episode_completion_status" ],
+    "dc:title": "Episode - Completion Status",
+    "schema:description": "An indication of the completion status of an *Episode of Care*.",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "string"
+    },
+    "default": "0"
+  },{
+    "name": "mobile_number",
+    "titles": [ "mobile_number" ],
+    "dc:title": "Mobile Number",
+    "schema:description": "The mobile phone number of the client.",
+    "schema:disambiguatingDescription": "table/invitation/mobile-number.rst",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "string"
+    }
+  },{
+    "name": "email",
+    "titles": [ "email" ],
+    "dc:title": "Email",
+    "schema:description": "The email address of the client.",
+    "schema:disambiguatingDescription": "table/invitation/email.rst",
+    "schema:dateCreated": "2021-05-18",
+    "datatype": {
+      "base": "string"
+    }
+  }],
+  "primaryKey": [ "organisation_path", "episode_key" ],
+  "foreignKeys": [{
+    "columnReference": "episode_completion_status",
+    "reference": {
+      "resource": "table/invitation/episode-completion-status.csv",
+      "columnReference": "id"
+    }
+  }]
+}

@@ -1,0 +1,26 @@
+{
+  "@type": "TableGroup",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "dc:title": "YES Invitations Data Elements",
+  "dc:publisher": {
+    "schema:name": "Strategic Data Pty Ltd",
+    "schema:url": { "@id": "http://www.strategicdata.com.au" }
+  },
+  "dc:modified": { "@value": "2016-06-22", "@type": "xsd:date"},
+  "tables": [{
+    "dc:title": "Metadata",
+    "url": "data/metadata.csv",
+    "schema:name": "metadata",
+    "schema:description": "table/metadata.rst",
+    "tableSchema": "table/metadata-metadata.json"
+  }, {
+    "dc:title": "Invitations",
+    "url": "data/invitations.csv",
+    "schema:name": "invitation",
+    "schema:description": "table/invitations.rst",
+    "tableSchema": "table/invitation-metadata.json"
+  }, {
+    "url": "table/invitation/episode-completion-status.csv",
+    "tableSchema": "table/invitation/episode-completion-status.json"
+  }]
+}
