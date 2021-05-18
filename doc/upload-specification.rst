@@ -97,19 +97,26 @@ Metadata file
 ^^^^^^^^^^^^^
 
 All uploads must include a Metadata file/worksheet.
-- In the first row, the first cell must contain 'key' and the second cell must contain 'value'
-- In the second row, the first cell must contain 'type' and the second cell must contain 'PMHC'
-- In the third row, the first cell must contain 'version' and the second cell must contain '2.0'
+
+- In the first row, the first cell must contain 'key' and the second cell
+  must contain 'value'
+- In the second row, the first cell must contain 'type' and the second
+  cell must contain 'OMSSS-INVITATIONS'
+- In the third row, the first cell must contain 'version' and the second
+  cell must contain '1.0'
+- In the fourth row, the first cell must contain 'instrument' and the second
+  cell must contain the name of a supported instrument
 
 i.e.:
 
-+--------------+-----------------+
-| key          | value           |
-+--------------+-----------------+
-| type         | YES-INVITATIONS |
-+--------------+-----------------+
-| version      | 2.0             |
-+--------------+-----------------+
+.. csv-table:: Metadata file
+  :file: metadata-file.csv
+
+Supported instruments:
+
+.. csv-table:: Supported instruments
+  :file: supported-instruments.csv
+  :header-rows: 1
 
 Data elements for the metadata upload file/worksheet are defined at
 :ref:`metadata-data-elements`.
@@ -133,4 +140,4 @@ Data elements for the invitation upload file/worksheet are defined at
 Example invitation data:
 
 - `CSV invitation file <_static/invitations.csv>`_.
-- `XLSX invitation worksheet <_static/yes-invitations-upload.xlsx>`_.
+- `XLSX invitation worksheet <_static/omsss-invitations-upload.xlsx>`_.

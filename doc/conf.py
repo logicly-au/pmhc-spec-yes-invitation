@@ -58,7 +58,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PMHC MDS YES Invitations Specification'
+project = u'PMHC MDS OMSSS Invitations Specification'
 copyright = u'2021, Australian Government - Department of Health'
 author = u'PMHC MDS Working Group'
 
@@ -220,7 +220,7 @@ html_extra_path = ['CNAME', '.nojekyll']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PMHC-MDS-YES-Invitations-Specification'
+htmlhelp_basename = 'PMHC-MDS-OMSSS-Invitations-Specification'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -242,8 +242,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'PMHC-MDS-YES-invitations-spec.tex',
-   u'Primary Mental Health Care Minimum Dataset YES invitations specification',
+  (master_doc, 'PMHC-MDS-OMSSS-invitations-spec.tex',
+   u'Primary Mental Health Care Minimum Dataset OMSSS invitations specification',
    author, 'manual'),
 ]
 
@@ -273,8 +273,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'PMHC MDS YES Invitations Specification',
-     u'Primary Mental Health Care Minimum Dataset YES Invitations specification',
+    (master_doc, 'PMHC MDS OMSSS Invitations Specification',
+     u'Primary Mental Health Care Minimum Dataset OMSSS Invitations specification',
      [author], 1)
 ]
 
@@ -288,10 +288,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'PMHC-MDS-YES-invitations-spec',
-   u'Primary Mental Health Care Minimum Dataset YES Invitations specification',
-   author, 'PMHC-MDS-YES-invitations-spec',
-   'Primary Mental Health Care Minimum Dataset YES Invitations specification',
+  (master_doc, 'PMHC-MDS-OMSSS-invitations-spec',
+   u'Primary Mental Health Care Minimum Dataset OMSSS Invitations specification',
+   author, 'PMHC-MDS-OMSSS-invitations-spec',
+   'Primary Mental Health Care Minimum Dataset OMSSS Invitations specification',
    'Miscellaneous'),
 ]
 

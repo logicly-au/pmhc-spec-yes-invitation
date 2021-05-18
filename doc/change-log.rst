@@ -1,7 +1,7 @@
-.. _yes)invitations_spec_changelog:
+.. _omsss_invitations_spec_changelog:
 
-YES Invitations Change log
-==========================
+OMSSS Invitations Change log
+============================
 
 ??/??/2021 - Version 1.0 - draft
 --------------------------------

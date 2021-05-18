@@ -1,7 +1,7 @@
 {
   "@type": "TableGroup",
   "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
-  "dc:title": "YES Invitations Data Elements",
+  "dc:title": "OMSSS Invitations Data Elements",
   "dc:publisher": {
     "schema:name": "Strategic Data Pty Ltd",
     "schema:url": { "@id": "http://www.strategicdata.com.au" }

@@ -23,13 +23,14 @@ the type and version of the uploaded data.
 For this version of the specification the required content is shown in the
 following table:
 
-+--------------+-----------------+
-| key          | value           |
-+--------------+-----------------+
-| type         | YES-INVITATIONS |
-+--------------+-----------------+
-| version      | 2               |
-+--------------+-----------------+
+.. csv-table:: Metadata file
+  :file: metadata-file.csv
+
+Supported instruments:
+
+.. csv-table:: Supported instruments
+  :file: supported-instruments.csv
+  :header-rows: 1
 
 ----------
 
@@ -57,6 +58,6 @@ Download Specification Files
 ----------------------------
 
 Available for software developers designing extracts for the PMHC MDS, please
-click the link below to download the PMHC MDS Yes Invitations Specification files:
+click the link below to download the PMHC MDS OMSSS Invitations Specification files:
 
-* `Specification zip <_static/pmhcmds-yes-invitations-spec-meta.zip>`_
+* `Specification zip <_static/pmhcmds-omsss-invitations-spec-meta.zip>`_
