@@ -29,6 +29,7 @@ Version |version|
    :caption: Table of contents
    :maxdepth: 3
 
+   introduction
    specifications
    upload-specification
    validation-rules

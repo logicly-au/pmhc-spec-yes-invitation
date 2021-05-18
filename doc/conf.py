@@ -58,7 +58,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PMHC MDS Data Specification'
+project = u'PMHC MDS YES Invitations Specification'
 copyright = u'2021, Australian Government - Department of Health'
 author = u'PMHC MDS Working Group'
 
@@ -151,7 +151,7 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static', '_data/_orig']
+html_static_path = ['_static']
 
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)

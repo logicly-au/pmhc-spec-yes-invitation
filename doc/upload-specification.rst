@@ -121,7 +121,7 @@ Example metadata data:
 - `CSV metadata file <_static/metadata.csv>`_.
 - `XLSX metadata worksheet <_static/pmhc-upload.xlsx>`_.
 
-.. _client-format:
+.. _invitation-format:
 
 Invitation format
 ^^^^^^^^^^^^^^^^^
