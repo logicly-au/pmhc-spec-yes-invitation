@@ -6,6 +6,10 @@
     "schema:name": "Strategic Data Pty Ltd",
     "schema:url": { "@id": "http://www.strategicdata.com.au" }
   },
+  "schema:specification": {
+    "schema:name": "omsss-invitations",
+    "schema:version": "1.0"
+  },
   "dc:modified": { "@value": "2016-06-22", "@type": "xsd:date"},
   "tables": [{
     "dc:title": "Metadata",
