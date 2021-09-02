@@ -80,6 +80,18 @@
     "datatype": {
       "base": "string"
     }
+  },{
+    "name": "reminders",
+    "titles": [ "reminders" ],
+    "dc:title": "Reminders",
+    "schema:description": "Send reminders to the client?",
+    "schema:disambiguatingDescription": "table/invitation/reminders.rst",
+    "schema:dateCreated": "2021-06-18",
+    "schema:domain": "YES, Yes, yes, Y, y, NO, No, no, N, n",
+    "datatype": {
+      "base": "string",
+      "format": "^(YES|Yes|yes|Y|y|NO|No|no|N|n)$"
+    }
   }],
   "primaryKey": [ "organisation_path", "episode_key" ],
   "foreignKeys": [{
