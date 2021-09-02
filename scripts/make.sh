@@ -6,12 +6,17 @@ set -e
 source doc/version.conf
 export SPEC_VERSION
 
-docker pull docker.sdlocal.net/csvw/metadata2rst:v2
+if [[ -z $RECORD_MATCH ]]; then
+  RECORD_MATCH=".*"
+fi
+
+docker pull docker.sdlocal.net/csvw/metadata2rst:release
 docker pull stratdat/sphinx:production
 docker pull stratdat/sphinx-html2pdf:production
 
-docker run --rm -v `pwd`:/mnt/cwd docker.sdlocal.net/csvw/metadata2rst:v2 \
-  --meta=metadata.json
+docker run --rm -v `pwd`:/mnt/cwd docker.sdlocal.net/csvw/metadata2rst:release \
+  --meta=metadata.json \
+  --record_match "${RECORD_MATCH}"
 
 # make zip file
 scripts/metadata2zip.sh
