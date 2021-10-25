@@ -15,16 +15,13 @@
 METeOR: `614094 <http://meteor.aihw.gov.au/content/index.phtml/itemId/614094>`__",date,"—","The date on which an *Episode of Care* is formally or administratively ended"
 "`Episode - Completion Status`_ (episode_completion_status)
 
-",string,"—",":0: Episode open
-:1: Episode closed - treatment concluded
-:2: Episode closed administratively - client could not be contacted
-:3: Episode closed administratively - client declined further contact
-:4: Episode closed administratively - client moved out of area
-:5: Episode closed administratively - client referred elsewhere
-:6: Episode closed administratively - other reason"
+",string,"—","An indication of the completion status of an *Episode of Care*."
 "`Mobile Number`_ (mobile_number)
 
 ",string,"—","The mobile phone number of the client."
 "`Email`_ (email)
 
 ",string,"—","The email address of the client."
+"`Reminders`_ (reminders)
+
+",string,"—","YES, Yes, yes, Y, y, NO, No, no, N, n"
