@@ -47,7 +47,7 @@
     "schema:dateCreated": "2021-05-18",
     "datatype": {
       "base": "date",
-      "format": "dMMyyyy",
+      "format": "yyyy-MM-dd",
       "minimum": "2016-01-01"
     }
   },{
@@ -93,12 +93,5 @@
       "format": "^(YES|Yes|yes|Y|y|NO|No|no|N|n)$"
     }
   }],
-  "primaryKey": [ "organisation_path", "episode_key" ],
-  "foreignKeys": [{
-    "columnReference": "episode_completion_status",
-    "reference": {
-      "resource": "table/invitation/episode-completion-status.csv",
-      "columnReference": "id"
-    }
-  }]
+  "primaryKey": [ "organisation_path", "episode_key" ]
 }

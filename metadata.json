@@ -23,8 +23,5 @@
     "schema:name": "invitation",
     "schema:description": "table/invitations.rst",
     "tableSchema": "table/invitation-metadata.json"
-  }, {
-    "url": "table/invitation/episode-completion-status.csv",
-    "tableSchema": "table/invitation/episode-completion-status.json"
   }]
 }

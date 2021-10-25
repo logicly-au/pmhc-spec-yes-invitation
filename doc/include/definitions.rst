@@ -28,6 +28,7 @@ The email address of the client.
 :Data type: string
 
 :Required: no
+
 :Notes:
   Either a mobile number or an email address must be provided for each client so
   that a link can be sent to the client inviting them to complete a survey as
@@ -51,15 +52,6 @@ An indication of the completion status of an *Episode of Care*.
 
 :Required: no
 
-:Domain:
-  :0: Episode open
-  :1: Episode closed - treatment concluded
-  :2: Episode closed administratively - client could not be contacted
-  :3: Episode closed administratively - client declined further contact
-  :4: Episode closed administratively - client moved out of area
-  :5: Episode closed administratively - client referred elsewhere
-  :6: Episode closed administratively - other reason
-
 ----------
 
 .. _dfn-episode_end_date:
@@ -74,6 +66,7 @@ The date on which an *Episode of Care* is formally or administratively ended
 :Data type: date
 
 :Required: no
+
 :Notes:
   - The episode end date must not be before 1st January 2016.
   
@@ -96,6 +89,7 @@ This is a number or code assigned to each episode. The Episode Key is unique and
 :Data type: string (2,50)
 
 :Required: yes
+
 :Notes:
   See `Episode Key <https://docs.pmhc-mds.com/projects/data-specification/en/v2/data-model-and-specifications.html#episode-key>`_.
   
@@ -129,6 +123,7 @@ The mobile phone number of the client.
 :Data type: string
 
 :Required: no
+
 :Notes:
   Either a mobile number or an email address must be provided for each client so
   that a link can be sent to the client inviting them to complete a survey as
@@ -151,6 +146,7 @@ A sequence of colon separated Organisation Keys that fully specifies the Provide
 :Data type: string
 
 :Required: yes
+
 :Notes:
   A combination of the Primary Health Network's (PHN's) Organisation Key and the
   Provider Organisation's Organisation Key separated by a colon.
@@ -164,6 +160,33 @@ A sequence of colon separated Organisation Keys that fully specifies the Provide
   +------------------+-------------------------------+---------------------------------------------+----------------------------+-------------------+
   | PO101            | Test Provider Organisation    | Private Allied Health Professional Practice | PHN999                     | PHN999:PO101      |
   +------------------+-------------------------------+---------------------------------------------+----------------------------+-------------------+
+  
+
+----------
+
+.. _dfn-reminders:
+
+Reminders
+^^^^^^^^^
+
+Send reminders to the client?
+
+:Field name: reminders
+
+:Data type: string
+
+:Required: no
+
+:Domain:
+  YES, Yes, yes, Y, y, NO, No, no, N, n
+
+:Notes:
+  Indicates whether reminders should be sent to the client.
+  
+  Invitations are valid for 7 days. The following reminder emails will be sent:
+  
+  * 2 days after the invitation - Reminding the client to fill in the YES. Also reminding them of the date on which it will expire.
+  * 6 days after the invitation - Reminding the client to fill in the YES. Reminding them that it will expire tomorrow.
   
 
 ----------
