@@ -47,7 +47,7 @@
     "schema:dateCreated": "2021-05-18",
     "datatype": {
       "base": "date",
-      "format": "dMMyyyy",
+      "format": "yyyy-MM-dd",
       "minimum": "2016-01-01"
     }
   },{
