@@ -22,5 +22,4 @@ Invitation
    must be the key of existing client within the PMHC MDS.
 3. `Episode Key <https://docs.pmhc-mds.com/projects/data-specification/en/v2/data-model-and-specifications.html#episode-key>`_
    must be the key of existing episode within the PMHC MDS.
-4. :ref:`dfn-mobile_number` must ...
-5. :ref:`dfn-email` must ...
+4. Either :ref:`dfn-mobile_number` or :ref:`dfn-email` must be supplied.

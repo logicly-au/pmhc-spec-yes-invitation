@@ -58,7 +58,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PMHC MDS OMSSS Invitations Specification'
+project = u'PMHC MDS YES Invitation Specification'
 copyright = u'2021, Australian Government - Department of Health'
 author = u'PMHC MDS Working Group'
 
