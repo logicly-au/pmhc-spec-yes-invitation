@@ -27,7 +27,7 @@ pushd .
 cd doc
 
 rm -rf _data build
-cp -rf ../data _data
+-e ../data && cp -rf ../data _data
 
 GIT_VERSION=$(git describe --tags --always)
 
