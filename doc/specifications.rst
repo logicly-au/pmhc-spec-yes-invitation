@@ -26,12 +26,6 @@ following table:
 .. csv-table:: Metadata file
   :file: metadata-file.csv
 
-Supported instruments:
-
-.. csv-table:: Supported instruments
-  :file: supported-instruments.csv
-  :header-rows: 1
-
 ----------
 
 .. _invitation-data-elements:
@@ -39,17 +33,13 @@ Supported instruments:
 Invitation
 ^^^^^^^^^^
 
-Provider Organisation data is for administrative use within the PMHC MDS
-system. It is managed by the PHN's via the PMHC MDS administrative interface,
-it cannot be uploaded.
-
 .. csv-table:: Invitation record layout
   :file: record/invitation.csv
   :header-rows: 1
 
 -----
 
-.. include:: include/definitions.rst
+.. include:: data-specification/include/definitions.rst
 
 
 .. _data-specifications-download:
@@ -58,6 +48,6 @@ Download Specification Files
 ----------------------------
 
 Available for software developers designing extracts for the PMHC MDS, please
-click the link below to download the PMHC MDS OMSSS Invitations Specification files:
+click the link below to download the PMHC MDS YES Invitation Specification files:
 
-* `Specification zip <_static/pmhcmds-omsss-invitations-spec-meta.zip>`_
+* `Specification zip <_static/pmhcmds-yes-invitation-spec-meta.zip>`_

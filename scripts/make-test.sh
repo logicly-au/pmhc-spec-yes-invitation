@@ -6,28 +6,23 @@ set -e
 source doc/version.conf
 export SPEC_VERSION
 
-if [[ -z $RECORD_MATCH ]]; then
-  RECORD_MATCH=".*"
-fi
-
-docker pull docker.sdlocal.net/csvw/metadata2rst:release
+docker pull docker.sdlocal.net/csvw/metadata2rst
 docker pull stratdat/sphinx:production
 docker pull stratdat/sphinx-html2pdf:production
 
-docker run --rm -v `pwd`:/mnt/cwd docker.sdlocal.net/csvw/metadata2rst:release \
-  --meta=metadata.json \
-  --record_match "${RECORD_MATCH}"
+docker run --rm -v `pwd`:/mnt/cwd docker.sdlocal.net/csvw/metadata2rst \
+  --meta=metadata.json
 
 # make zip file
 scripts/metadata2zip.sh
 # mv new zip to data-specification folder
-mv pmhcmds-yes-invitation-spec-meta.zip doc/_static/
+mv pmhcmds-spec-meta.zip doc/_static/
 
 pushd .
 cd doc
 
 rm -rf _data build
-cp -rf ../data _data
+#cp -rf ../data _data
 
 GIT_VERSION=$(git describe --tags --always)
 
@@ -47,7 +42,7 @@ docker run --rm -e GIT_VERSION -v `pwd`:/mnt/workdir \
   stratdat/sphinx-html2pdf:production \
   /mnt/workdir/scripts/make-pdf.pl \
   --spec-name "${SPEC_NAME}-${SPEC_VERSION}" \
-  --doc-dir   "/mnt/workdir/doc"
+  --doc-dir   "/mnt/workdir/doc/data-specification"
 
 pushd .
 cd doc
