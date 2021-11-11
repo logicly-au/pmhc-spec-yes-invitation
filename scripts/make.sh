@@ -27,7 +27,10 @@ pushd .
 cd doc
 
 rm -rf _data build
--e ../data && cp -rf ../data _data
+if [[ -e ../data  ]]; then
+    cp -rf ../data _data
+    echo "Copied data directory."
+fi
 
 GIT_VERSION=$(git describe --tags --always)
 

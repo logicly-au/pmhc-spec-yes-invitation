@@ -1,0 +1,12 @@
+organisation_path,client_key,episode_key,episode_end_date,episode_completion_status,mobile_number,email,reminders
+PHN999:Hub01,AB01CD,AB01CD-E01,2020-12-16,"Episode closed administratively - client moved out of area",,,
+PHN999:NFP01,CL0001,CL0001-E01,2020-05-27,"Episode closed administratively - client moved out of area",,,
+PHN999:NFP01,CL0002,CL0002-E01,2020-05-17,"Episode closed administratively - client could not be contacted",,,
+PHN999:PO1,CL0001,CL0001-E02,2019-03-28,"Episode closed administratively - other reason",,,
+PHN999:PO1,CL0006,E07,2017-04-01,"Episode closed administratively - client could not be contacted",,,
+PHN999:PO1,CL0008,E11,2017-04-01,"Episode closed administratively - client could not be contacted",,,
+PHN999:PO2,CL0023,EP000024,2017-01-13,"Episode closed - treatment concluded",,,
+PHN999:PO2,CL0013,EP000023,2016-12-08,"Episode closed - treatment concluded",,,
+PHN999:PO2,CL0020,EP000027,2016-11-25,"Episode closed - treatment concluded",,,
+PHN999:PO2,CL0021,EP000025,2016-11-19,"Episode closed - treatment concluded",,,
+PHN999:PO2,CL0011,EP000034,2016-11-15,"Episode closed - treatment concluded",,,

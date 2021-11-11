@@ -117,8 +117,8 @@ Example metadata data:
 
 .. This is a comment. metadata validation rules required!
 
-- `CSV metadata file <_static/metadata.csv>`_.
-- `XLSX metadata worksheet <_static/pmhc-upload.xlsx>`_.
+- `CSV metadata file <_static/PHN999-20161011-20211111-client-completed-treatment/metadata.csv>`_.
+- `XLSX metadata worksheet <_static/PHN999-20161011-20211111-client-completed-treatment-metadata.xlsx>`_.
 
 .. _invitation-format:
 
@@ -131,5 +131,5 @@ Data elements for the invitation upload file/worksheet are defined at
 
 Example invitation data:
 
-- `CSV invitation file <_static/invitations.csv>`_.
-- `XLSX invitation worksheet <_static/yes-invitations-upload.xlsx>`_.
+- `CSV invitation file <_static/PHN999-20161011-20211111-client-completed-treatment/invitations.csv>`_.
+- `XLSX invitation worksheet <_static/PHN999-20161011-20211111-client-completed-treatment-invitations.xlsx>`_.
