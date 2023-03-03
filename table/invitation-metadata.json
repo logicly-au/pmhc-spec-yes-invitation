@@ -43,7 +43,6 @@
     "dc:title": "Episode - End Date",
     "schema:description": "The date on which an *Episode of Care* is formally or administratively ended",
     "schema:disambiguatingDescription": "table/invitation/end-date.rst",
-    "schema:meteorItem": "614094",
     "schema:dateCreated": "2021-05-18",
     "datatype": {
       "base": "date",
