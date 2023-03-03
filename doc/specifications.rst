@@ -39,7 +39,7 @@ Invitation
 
 -----
 
-.. include:: data-specification/include/definitions.rst
+.. include:: include/definitions.rst
 
 
 .. _data-specifications-download:

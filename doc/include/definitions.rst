@@ -68,12 +68,12 @@ The date on which an *Episode of Care* is formally or administratively ended
 :Required: no
 
 :Notes:
+  - The episode end date must be in the format YYYY-mm-dd.
+  
   - The episode end date must not be before 1st January 2016.
   
   - The episode end date must not be in the future.
   
-
-:METeOR: `614094 <http://meteor.aihw.gov.au/content/index.phtml/itemId/614094>`__
 
 ----------
 

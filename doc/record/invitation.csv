@@ -10,9 +10,7 @@
 ","string (2,50)",yes,"This is a number or code assigned to each episode. The Episode Key is unique and stable for each episode at the level of the Provider Organisation."
 "`Episode - End Date`_ (episode_end_date)
 
-
-
-METeOR: `614094 <http://meteor.aihw.gov.au/content/index.phtml/itemId/614094>`__",date,"—","The date on which an *Episode of Care* is formally or administratively ended"
+",date,"—","The date on which an *Episode of Care* is formally or administratively ended"
 "`Episode - Completion Status`_ (episode_completion_status)
 
 ",string,"—","An indication of the completion status of an *Episode of Care*."
