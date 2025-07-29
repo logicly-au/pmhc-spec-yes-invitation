@@ -13,9 +13,9 @@
 # serve to show the default.
 
 import sys
-import os
 import shlex
-import imp
+from os import environ
+from dotenv import load_dotenv
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -24,11 +24,10 @@ import imp
 
 # -- Read important params from environment
 
-global ddict_conf
-ddict_conf = imp.load_source('ddict_conf','./version.conf')
+load_dotenv('version.env')
 
-spec_name = ddict_conf.SPEC_NAME
-version   = ddict_conf.SPEC_VERSION
+spec_name = environ.get('SPEC_NAME')
+version   = environ.get('SPEC_VERSION')
 
 # -- General configuration ------------------------------------------------
 
@@ -76,7 +75,7 @@ release = version
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'English'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -307,11 +306,10 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+on_rtd = environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
     html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # For substitutions in docs
 # see https://github.com/hoccleve-archive/hocl.tk/blob/70b71b5a265d0b1d64c5cb6e43b686d03ead4078/docs/conf.py#L48

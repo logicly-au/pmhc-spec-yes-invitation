@@ -3,20 +3,24 @@
 # Exit if anything errors
 set -e
 
-source doc/version.conf
+source doc/version.env
 export SPEC_VERSION
 
-if [[ -z $RECORD_MATCH ]]; then
-  RECORD_MATCH=".*"
-fi
+source config.sh
 
-docker pull docker.sdlocal.net/csvw/metadata2rst:release
-docker pull stratdat/sphinx:production
-docker pull stratdat/sphinx-html2pdf:production
+docker pull docker.sdlocal.net/csvw/metadata2rst:multiplatform
+docker pull logicly/sphinx-html2pdf:production
 
-docker run --rm -v `pwd`:/mnt/cwd docker.sdlocal.net/csvw/metadata2rst:release \
-  --meta=metadata.json \
-  --record_match "${RECORD_MATCH}"
+docker run --rm -v "$(pwd):/mnt/cwd" docker.sdlocal.net/csvw/metadata2rst:multiplatform \
+  --meta="${METADATA_FILE}"
+
+# make example zip and xlsx Files
+echo "Making example files"
+pushd .
+cd doc/_static/example-files
+rm -fv *.zip
+zip YES-INVITATION-1-0-client-completed-treatment.zip client-completed-treatment/*
+popd
 
 # make zip file
 scripts/metadata2zip.sh
@@ -35,19 +39,22 @@ fi
 GIT_VERSION=$(git describe --tags --always)
 
 echo "Building PDF"
-docker run --rm -e GIT_VERSION -v `pwd`:/mnt/workdir \
-  stratdat/sphinx:production make singlehtml
+docker compose run \
+  --build \
+  -e GIT_VERSION \
+  --rm sphinx \
+  make singlehtml
 
 popd
 
 echo "Optimising images"
 docker run --rm -e GIT_VERSION -v `pwd`:/mnt/workdir \
   --workdir /mnt/workdir/doc/build/singlehtml/_images \
-  stratdat/sphinx-html2pdf:production \
+  logicly/sphinx-html2pdf:production \
   find . -name *.png -exec pngquant --force --output {} 8 {} \;
 
 docker run --rm -e GIT_VERSION -v `pwd`:/mnt/workdir \
-  stratdat/sphinx-html2pdf:production \
+  logicly/sphinx-html2pdf:production \
   /mnt/workdir/scripts/make-pdf.pl \
   --spec-name "${SPEC_NAME}-${SPEC_VERSION}" \
   --doc-dir   "/mnt/workdir/doc"
@@ -55,7 +62,9 @@ docker run --rm -e GIT_VERSION -v `pwd`:/mnt/workdir \
 pushd .
 cd doc
 
-docker run --rm -e GIT_VERSION -v `pwd`:/mnt/workdir \
-  stratdat/sphinx:production make html
+docker compose run \
+  -e GIT_VERSION \
+  --rm sphinx \
+  make html
 
 popd

@@ -18,13 +18,8 @@ meet the following requirements:
 
 Excel Workbook (XLSX)
 ^^^^^^^^^^^^^^^^^^^^^
-Excel files must be in XLSX format. The following versions of Excel support this
-format:
-
-- Excel 2007 (v12.0)
-- Excel 2010 (v14.0)
-- Excel 2013 (v15.0)
-- Excel 2016 (v16.0)
+Excel files must be in XLSX format. xcel 2007 (v12.0) and above support this
+file format.
 
 One XLSX file must be uploaded containing multiple worksheets - one worksheet
 for each format described :ref:`below <files-to-upload>`.
@@ -69,15 +64,7 @@ The following files/worksheets can be uploaded to the PMHC MDS:
   :file: upload-file-types.csv
   :header-rows: 1
 
-Each of the example files assumes the following organisation structure:
-
-+------------------+----------------------------+---------------------------------------------+---------------------+
-| Organisation Key | Organisation Name          | Organisation Type                           | Parent Organisation |
-+==================+============================+=============================================+=====================+
-| PHN999           | Test PHN                   | Primary Health Network                      | None                |
-+------------------+----------------------------+---------------------------------------------+---------------------+
-| NFP01            | Test Provider Organisation | Private Allied Health Professional Practice | PHN999              |
-+------------------+----------------------------+---------------------------------------------+---------------------+
+Example upload files can be found at :ref:`example-upload-file`.
 
 .. _file-format:
 
@@ -86,10 +73,11 @@ File format
 Requirements for file formats:
 
 - The first row must contain the column headings as defined for each file type.
-- Each item is a column in the file/worksheet. The 'Field Name' must be used for
+- Data elements for each file/worksheet are defined at :ref:`record-formats`.
+- Each item is a column in the file/worksheet. The 'Field Name' as defined in
+  :ref:`record-formats` must be used for
   the column headings. The columns must be kept in the same order.
 - The second and subsequent rows must contain the data.
-- Data elements for each file/worksheet are defined at :ref:`record-formats`.
 
 .. _metadata-format:
 
@@ -113,12 +101,7 @@ i.e.:
 Data elements for the metadata upload file/worksheet are defined at
 :ref:`metadata-data-elements`.
 
-Example metadata data:
-
-.. This is a comment. metadata validation rules required!
-
-- `CSV metadata file <_static/PHN999-20161011-20211111-client-completed-treatment/metadata.csv>`_.
-- `XLSX metadata worksheet <_static/PHN999-20161011-20211111-client-completed-treatment-metadata.xlsx>`_.
+An example Metadata file can be found at :ref:`example-upload-file`.
 
 .. _invitation-format:
 
@@ -129,7 +112,23 @@ The invitation file/worksheet is required to be uploaded each time.
 Data elements for the invitation upload file/worksheet are defined at
 :ref:`invitation-data-elements`.
 
-Example invitation data:
+An example Invitation file can be found in the example file at :ref:`example-upload-file`.
 
-- `CSV invitation file <_static/PHN999-20161011-20211111-client-completed-treatment/invitations.csv>`_.
-- `XLSX invitation worksheet <_static/PHN999-20161011-20211111-client-completed-treatment-invitations.xlsx>`_.
+.. _example-upload-file:
+
+Example Upload File
+-------------------
+
+The example file assumes the following organisation structure:
+
++------------------+----------------------------+---------------------------------------------+---------------------+
+| Organisation Key | Organisation Name          | Organisation Type                           | Parent Organisation |
++==================+============================+=============================================+=====================+
+| PHN999           | Test PHN                   | Primary Health Network                      | None                |
++------------------+----------------------------+---------------------------------------------+---------------------+
+| NFP01            | Test Provider Organisation | Private Allied Health Professional Practice | PHN999              |
++------------------+----------------------------+---------------------------------------------+---------------------+
+
+.. csv-table:: Summary of example upload file
+  :file: example-file.csv
+  :header-rows: 1
